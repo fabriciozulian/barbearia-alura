@@ -10,7 +10,7 @@
     <body>
         <header>
             <div class="caixa">
-                <h1><img src="/front/ex1/img/logo.png"></h1>
+                <h1><img src="/front/ex1/img/logo.png" alt="Logo da Barbearia Alura"></h1>
                 <nav>
                     <ul>
                         <li><a href="/front/ex1/index.html">Home</a></li>
@@ -24,16 +24,44 @@
         <main>
             <form>
                 <label for="inNomeSobrenome">Nome e Sobrenome:</label>
-                <input type="text" id="inNomeSobrenome">
+                <input type="text" id="inNomeSobrenome" class="input-padrao" required>
 
                 <label for="inEmail">E-mail:</label>
-                <input type="text" id="inEmail">
+                <input type="email" id="inEmail" class="input-padrao" placeholder="email@dominio.com" required>
 
                 <label for="inTelefone">Telefone:</label>
-                <input type="text" id="inTelefone">
+                <input type="tel" id="inTelefone" class="input-padrao" placeholder="+xx xx 9xxxx-xxxx" required>
 
-                <textarea cols="30" rows="10"></textarea>
+                <label for="inMensagem">Mensagem</label>
+                <textarea id="inMensagem" cols="30" rows="10" class="input-padrao" required></textarea>
 
+
+                <fieldset>
+                    <legend>Como prefere o nosso contato?</legend>
+                    
+                    <label for="inRadioEmail"><input type="radio" name="contato" value="email" id="inRadioEmail" required>E-mail</label>
+                    
+                    
+                    <label for="inRadioTelefone"><input type="radio" name="contato" value="telefone" id="inRadioTelefone" required>Telefone</label>
+                    
+                    
+                    <label for="inRadioWhatsapp"><input type="radio" name="contato" value="whatsapp" id="inRadioWhatsapp" required>Whatsapp</label>
+                    
+                </fieldset>
+
+                <fieldset>    
+                    <legend>Qual o horário prefere ser atendido?</legend>
+                    <select>
+                        <option>Manhã</option>
+                        <option>Tarde</option>
+                        <option>Noite</option>
+                    </select>
+                </fieldset>
+
+                <label class="checkbox"><input type="checkbox">Gostaria de receber nossas novidades por email?</label>    
+                
+
+                
                 <input type="submit" value="Enviar">
             </form>
         </main>
